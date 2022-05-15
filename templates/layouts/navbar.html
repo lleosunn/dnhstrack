@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <div class="container-fluid">
+        <div class="btn-group">
+            <a class="navbar-brand" href="">Contact Tracing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarHome">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                    </li>
+
+                    <a class="nav-link" href={{ url_for('crud.crud_login') }}>Login <span class="sr-only"></span></a>
+                    <a class="nav-link" href={{ url_for('crud.crud_authorize') }}>Sign Up <span class="sr-only"></span></a>
+                    <a class="nav-link" href={{ url_for('crud.search') }}>Search <span class="sr-only"></span></a>
+                    <a class="nav-link" href={{ url_for('crud.logout') }}>Logout<span class="sr-only"></span></a>
+                    <a class="nav-link" href={{ url_for('registration') }}>Registration<span class="sr-only"></span></a>
+                    <a class="nav-link" href={{ url_for('planner') }}>Planner<span class="sr-only"></span></a>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <!-- Navbar clock -->
+                            <div style="color:white; alignment: right" class="btn-group">
+                                <div class="px-3" style="color:white;">
+                                    <span id="clock"></span>
+                                </div>
+                            </div>
+
+                            <!-- Navbar timer -->
+                            <div id="timerContainer">
+                                <div id="iconInputContainer" onclick="showTimer()">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div id="timerInputContainer" style="display:none; background-color:white; border-radius:6px;" >
+                                    <input id="timerInput" type="number" min="0.1" max="120" step="0.1" value="1" style="border-radius: 6px;">
+                                    <button id="startButton" onclick="timer()" style="border-radius:6px; color:black">Set Timer</button>
+                                    <p style="text-align: center" id="remainingTime"></p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Clock Control
+    // clockElement global element set for convenience
+    let clockElement = document.getElementById('clock');
+    // Clock update executes on each interval set by timer
+    function clock() {
+        let date = new Date();
+        clockElement.textContent = date.toLocaleString();
+    }
+    // Clock refresh timer, a reoccurring event
+    setInterval(clock, 1000);
+    // End Clock Control
+
+    function showTimer() {
+        if (document.getElementById("timerInputContainer").style.display == "none") {
+            document.getElementById("timerInputContainer").style.display = "block"
+            if (localStorage.getItem('end') !== null) {
+                timer()
+            }
+        } else {
+            document.getElementById("timerInputContainer").style.display = "none"
+        }
+    }
+    function timer() {
+        var duration = document.getElementById("timerInput").value
+        var current = new Date().getTime();
+        var New = duration*60000;
+        var end = current + New
+        if (localStorage.getItem('end') !== null)
+            end = localStorage.getItem('end')
+        localStorage.setItem('end', end)
+        document.getElementById("startButton").addEventListener("click",function(){
+            localStorage.removeItem('end')
+            clearInterval(myFunc)
+            timer()
+
+        })
+        var myFunc = setInterval(function() {
+            var now = new Date().getTime();
+            var timeleft = end - now
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            document.getElementById("remainingTime").style.color = "black"
+            document.getElementById("remainingTime").innerText = (hours + ":" + minutes + ":" + seconds)
+            if (timeleft<=0) {
+                clearInterval(myFunc);
+                document.getElementById("remainingTime").innerText = "TIME IS UP"
+                document.getElementById("remainingTime").style.color = "red"
+                document.getElementById("timerInputContainer").style.display = "block"
+                localStorage.removeItem('end')
+            }
+        },1000)
+    }
+</script>

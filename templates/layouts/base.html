@@ -1,0 +1,67 @@
+<!-- Custom file for standardizing Project Data
+This HTML is setup as as a Jinja2 layout, coders use layouts for:
+ ... standardization of style
+ ... setting expectations for data
+ ... code reuse
+-->
+<!DOCTYPE HTML>
+
+<!-- added for dark mode -->
+<html lang="en" data-theme="light">
+
+<html lang="en">
+
+{% set basename = "Levss" %}
+{% set github = "https://github.com/nighthawkcoders" %}
+{% set twitter = "https://twitter.com/NighthawkCoding" %}
+{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/561a0d84b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>{{ basename }} | {{ project }} </title>
+
+    {% block meta %}
+    {% endblock %}
+</head>
+
+<body>
+
+{% include "layouts/navbar.html" %}
+<style>
+    {
+        background-color: powderblue;
+        background-blend-mode: color;
+    }
+</style>
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row justify-content-end" style="padding: 2%;">
+        <div class="col-2" style="text-align: right;">
+            <a><h5>{{basename}}</h5></a>
+        </div>
+    </div>
+
+    <div class="product" style="margin-top: 2%;">
+        <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+
+            <div class="col-8" >
+                <h1>{{ project }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+
+</html>

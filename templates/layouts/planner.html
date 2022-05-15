@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- THE MAIN PROJECT -->
+{% set basename = "Nighthawk Coding" %}
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive Mono"> <!-- a monospace -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue"> <!-- https://fonts.google.com/specimen/Bebas+Neue?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One"> <!-- https://fonts.google.com/specimen/Poiret+One?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"> <!-- https://fonts.google.com/specimen/Monoton?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredericka the Great"> <!-- https://fonts.google.com/specimen/Fredericka+the+Great?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Forum"> <!--https://fonts.google.com/specimen/Forum?category=Display -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        p {
+            font-family: Arial;
+        }
+        body {
+            background-color: rgba(62, 83, 197, 0.62);
+        }
+        h1 {
+            font-family: Arial;
+            font-size: 65px;
+        }
+        table {
+            width: 1px;
+            /*column-rule: 4px dotted rgb(79, 185, 227);*/
+        }
+        .task {
+            height:400px;
+        }
+        .task, .day, .complete, th, td{
+            border: 2px solid black;
+            column-rule: 1px dotted rgb(79, 185, 227);
+
+        }
+    </style>
+    <title>Nighthawk Coding | Planner</title>
+</head>
+
+<body>
+<div style="margin-middle: 35px">
+    <h1>Planner</h1>
+    <p>Planner used by Del Norte staff faculty and student - A planner where you can list your work.</p>
+
+    <!-- button that leads to the repo, can style the button in css above -->
+    <a href="https://github.com/NastyEthan/flask_portfolio" target="_blank" class="btn">Schedule & Calender</a>
+
+
+    <!-- TABLE TIME -->
+    <!--    <div class="container">-->
+    <div class="row justify-content-md-center">
+        <!--            <div class="col-7">-->
+        <table class="table">
+            <tr class ="day" id="day">
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+
+            <tr class ="task" id="task">
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+                <td> <label> &nbsp </label>
+                    <input> </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+
+</html>
+<script>
+
+    function reply_click(clicked_id)
+    {
+        alert(clicked_id);
+    }
+</script>
