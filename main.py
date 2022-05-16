@@ -22,6 +22,10 @@ def registration():
 def planner():
     return render_template("layouts/planner.html")
 
+@app.route('/events')
+def events():
+    return render_template("pages/events.html")
+
 
 
 
