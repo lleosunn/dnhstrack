@@ -26,6 +26,27 @@ def planner():
 def events():
     return render_template("pages/events.html")
 
+@app.route('/pace_conversion')
+def pace_conversion():
+    return render_template("pages/pace_conversion.html")
+
+@app.route('/schedule')
+def schedule():
+    return render_template("pages/schedule.html")
+
+@app.route('/shop_dnhs')
+def shop_dnhs():
+    return render_template("pages/shop_dnhs.html")
+
+@app.route('/training_log')
+def training_log():
+    return render_template("pages/training_log.html")
+
+@app.route('/stats')
+def stats():
+    return render_template("pages/stats.html")
+
+
 
 
 
