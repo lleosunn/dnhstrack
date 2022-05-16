@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "PB Arcade" %}
+
+
+<html lang="en">ee
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+</head>
+{% block body %}
+<div class="container-fluid" style="background-color: var(--turqoise); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
+
+
+    <style>
+        /* Parent Container */
+        .content_img{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Child Text Container */
+        .content_img div{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: black;
+            color: white;
+            margin-bottom: 5px;
+            font-family: sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: visibility 0s, opacity 0.5s linear;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        /* Hover on Parent Container */
+        .content_img:hover{
+            cursor: pointer;
+        }
+
+        .content_img:hover div{
+            width: 150px;
+            padding: 8px 15px;
+            visibility: visible;
+            opacity: 0.7;
+        }
+
+        .hoverclick1{
+            background: url('../static/assets/sprints.jpeg') no-repeat;
+            cursor:pointer;
+            width:925px;
+            height:512px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick2{
+            background: url('../static/assets/polevault.png') no-repeat;
+            cursor:pointer;
+            width:925px;
+            height:512px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick3{
+            background: url('../static/assets/hurdles.png') no-repeat;
+            cursor:pointer;
+            width:925px;
+            height:512px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick4{
+            background: url('../static/assets/throws.png') no-repeat;
+            cursor:pointer;
+            width:925px;
+            height:512px;
+            transform: translateY(3px);
+        }
+
+        }
+        .fa:hover{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.7);
+
+        }
+    </style>
+
+    <script>
+        let i = 1;
+        let c = 0;
+        let p = 1;
+        function mature(){
+            c++;
+            while (c === 3) {
+                i--;
+                i--;
+                i--;
+                p--;
+                p--;
+                p--;
+                c--;
+                c--;
+            }
+            while (i < 4 && c === 1) {
+                if (document.getElementById("mature" + i).innerHTML = "mature" + i) {
+                    document.getElementById("mature" + i).style.visibility = "hidden";
+                    i++;
+                }
+            }
+            while (p < 4 && c === 2) {
+                if (document.getElementById("mature" + p).innerHTML = "mature" + p) {
+                    document.getElementById("mature" + p).style.visibility = "visible";
+                    p++;
+                }
+            }
+        }
+
+    </script>
+
+    <body>
+
+    <div>
+        <h1 style="font-size:75px; text-align:center; font-family: gilroy,serif;">Events</h1>
+        <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Learn about events you might be interested in!</h2>
+    </div>
+
+    <body>
+    <body>
+        <div style="text-align: center">
+            <input type="button" id="mature1" class="fa hoverclick1" onclick="location.href = 'reviewSquidgame';";>
+            <input type="button" id="mature2" class="fa hoverclick2" onclick="location.href = 'reviewBreakingbad';" style="margin-left: 0.5%">
+        </div>
+    </body>
+
+    <body>
+        <div style="text-align: center" >
+            <input type="button" class="fa hoverclick3" onclick="location.href = 'reviewTheoffice';"; style="margin-top: 1%">
+            <input type="button" class="fa hoverclick4" onclick="location.href = 'reviewMandalorian';" style="margin-left: 0.5%">
+        </div>
+    </body>
+{% endblock %}
+</html>

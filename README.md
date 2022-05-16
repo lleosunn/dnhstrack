@@ -1,13 +1,13 @@
-# LAJ
+# DNHS Track
 
 ## Time box  
 
-| Contributor | Roles | Github ID/Profile | Assigned Tasks | Commits | Pair Journal | Individual Github Pages |
-| ------ | -------- | -------------------- | ------------- | ------- | ------------ | ---------------------- |
-| Jessie | Design manager | [parkjessie](https://github.com/parkjessie) | [Tasks](https://github.com/parkjessie/LAJ/issues/parkjessie) | [Commits](https://github.com/parkjessie/LAJ/commit/d87734489af2cbf2f577893d20521df5d4be8cc8) | [Jessie Journal](https://github.com/parkjessie/LAJ/wiki/Jessie's-CB-Journal) | [Github Pages](https://parkjessie.github.io/New-repo/) |
-| Leah | Github admin | [leahsaph123](https://github.com/parkjessie/LAJ/commit/a505c2773b87f63aec1764719bd37e5f4b6031bb) | [Tasks](https://github.com/parkjessie/LAJ/issues/assigned/leahsaph123) | [Commits](https://github.com/parkjessie/LAJ/commits?author=leahsaph123) | [Leah's Journal](https://leahsaph123.github.io/tri3_individ/CBnotes) | [Github Pages](https://leahsaph123.github.io/tri3_individ/) |
-| Allie | Scrum Master | [xiaoa0](https://github.com/xiaoa0) | [Tasks](https://github.com/parkjessie/LAJ/issues/assigned/xiaoa0) | [Commits](https://github.com/parkjessie/LAJ/commits?author=xiaoa0) | [Allie's Journal](https://docs.google.com/document/d/1huWsfI7-3COuK45SiUF5_T3DFpNmcoGLhiiLbFigpsU/edit) | [Github Pages](https://xiaoa0.github.io/Data-Structures/) |
-| Michael | Deployment manager | [michaelScopic](https://github.com/michaelScopic) | [Tasks](https://github.com/parkjessie/LAJ/issues/assigned/michaelScopic) | [Commits](https://github.com/parkjessie/LAJ/commits?author=michaelScopic) | [Michael's Journal](https://www.youtube.com/watch?v=dQw4w9WgXcQ) | [Github Pages]() |
+| Name             | ID              | Scrumboard                                                                   | Issues | Commits  | Profile          |
+| ---------------- | --------------- | ---------------------------------------------------------------------------- | ------ | ----------- | ---------------- |
+| Connor Wang  | cwang999 | [Scrumboard](https://github.com/cwang999/n22p5-coders/projects/1?card_filter_query=assignee%3Acwang999) | [Issue](https://github.com/Archkitten/m22p4-ninjas/issues?q=is%3Aissue+label%3Aconnor+) | [Commits](https://github.com/cwang999/n22p5-coders/commits?author=cwang999)         | [@cwang999](https://github.com/cwang999)     |
+| Jacob Rosenkrantz| jar04 | [Scrumboard](https://github.com/cwang999/n22p5-coders/projects/1?card_filter_query=assignee%3jar04) | [Issue](https://github.com/cwang999/n22p5-coders/issues?q=is%3Aopen+is%3Aissue+author%3Ajar04+assignee%3Ajar04) | [Commits](https://github.com/cwang999/n22p5-coders/commits?author=jar04)         | [@jar04](https://github.com/jar04) |
+| Stanley Yan    | Stanleyy03840          | [Scrumboard](https://github.com/cwang999/n22p5-coders/projects/1?card_filter_query=assignee%3Stanleyy03840) | [Issue](https://github.com/cwang999/n22p5-coders/issues?q=is%3Aopen+is%3Aissue+author%3Ajar04+assignee%3AStanleyy03840) | [Commits](https://github.com/cwang999/n22p5-coders/commits?author=Stanleyy03840)         | [@Stanleyy03840](https://github.com/Stanleyy03840)          |
+| Leo Sun      | lleosunn  | [Scrumboard](https://github.com/cwang999/n22p5-coders/projects/1?card_filter_query=assignee%3Alleosunn) | [Issue](https://github.com/cwang999/n22p5-coders/issues?q=is%3Aopen+is%3Aissue+author%3Ajar04+assignee%3Alleosunn) | [Commits](https://github.com/cwang999/n22p5-coders/commits?author=lleosunn&since=2021-11-01&until=2021-12-01)          | [@lleosunn](https://github.com/lleosunn)  |
 
 ## Sponsor: Mr. Eveleth (assistant principal), [email](teveleth@powayusd.com)
 <a href="https://parkjessie.github.io/LAJ/meetingwithrowe">Initial meeting notes</a>
