@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
-{% set project = "PB Arcade" %}
 
-
-<html lang="en">ee
-<head>
-    <meta charset="UTF-8">
-    <title>Reviews</title>
-</head>
 {% block body %}
-<div class="container-fluid" style="background-color: var(--turqoise); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
-
-
     <style>
         /* Parent Container */
         .content_img{
@@ -49,39 +39,38 @@
             opacity: 0.7;
         }
 
-        .hoverclick1{
+        .sprints{
             background: url('../static/assets/sprints.jpeg') no-repeat;
             cursor:pointer;
-            width:925px;
-            height:512px;
+            width:49.5vw;
+            height:30vw;
             transform: translateY(3px);
         }
 
-        .hoverclick2{
+        .vault{
             background: url('../static/assets/polevault.png') no-repeat;
             cursor:pointer;
-            width:925px;
-            height:512px;
+            width:49.5vw;
+            height:30vw;
             transform: translateY(3px);
         }
 
-        .hoverclick3{
+        .hurdles{
             background: url('../static/assets/hurdles.png') no-repeat;
             cursor:pointer;
-            width:925px;
-            height:512px;
+            width:49.5vw;
+            height:30vw;
             transform: translateY(3px);
         }
 
-        .hoverclick4{
+        .throws{
             background: url('../static/assets/throws.png') no-repeat;
             cursor:pointer;
-            width:925px;
-            height:512px;
+            width:49.5vw;
+            height:30vw;
             transform: translateY(3px);
         }
 
-        }
         .fa:hover{
             font-size: 3em;
             letter-spacing: 1em;
@@ -92,58 +81,18 @@
         }
     </style>
 
-    <script>
-        let i = 1;
-        let c = 0;
-        let p = 1;
-        function mature(){
-            c++;
-            while (c === 3) {
-                i--;
-                i--;
-                i--;
-                p--;
-                p--;
-                p--;
-                c--;
-                c--;
-            }
-            while (i < 4 && c === 1) {
-                if (document.getElementById("mature" + i).innerHTML = "mature" + i) {
-                    document.getElementById("mature" + i).style.visibility = "hidden";
-                    i++;
-                }
-            }
-            while (p < 4 && c === 2) {
-                if (document.getElementById("mature" + p).innerHTML = "mature" + p) {
-                    document.getElementById("mature" + p).style.visibility = "visible";
-                    p++;
-                }
-            }
-        }
-
-    </script>
-
-    <body>
-
     <div>
         <h1 style="font-size:75px; text-align:center; font-family: gilroy,serif;">Events</h1>
         <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Learn about events you might be interested in!</h2>
     </div>
 
-    <body>
-    <body>
-        <div style="text-align: center">
-            <input type="button" id="mature1" class="fa hoverclick1" onclick="location.href = 'reviewSquidgame';";>
-            <input type="button" id="mature2" class="fa hoverclick2" onclick="location.href = 'reviewBreakingbad';" style="margin-left: 0.5%">
-        </div>
-    </body>
+    <div style="text-align: center">
+        <input type="button" class="fa sprints" onclick="location.href = 'sprints';";>
+        <input type="button" class="fa vault" onclick="location.href = 'vault';" style="margin-left: 0.1vw">
+    </div>
 
-    <body>
-        <div style="text-align: center" >
-            <input type="button" class="fa hoverclick3" onclick="location.href = 'reviewTheoffice';"; style="margin-top: 1%">
-            <input type="button" class="fa hoverclick4" onclick="location.href = 'reviewMandalorian';" style="margin-left: 0.5%">
-        </div>
-    </body>
+    <div style="text-align: center" >
+        <input type="button" class="fa hurdles" onclick="location.href = 'hurdles';";>
+        <input type="button" class="fa throws" onclick="location.href = 'throws';" style="margin-left: 0.1vw">
+    </div>
 {% endblock %}
-</html>
