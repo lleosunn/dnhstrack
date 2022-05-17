@@ -2,97 +2,18 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
-    <style>
-        /* Parent Container */
-        .content_img{
-            position: relative;
-            width: 200px;
-            height: 200px;
-            float: left;
-            margin-right: 10px;
-        }
-
-        /* Child Text Container */
-        .content_img div{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: black;
-            color: white;
-            margin-bottom: 5px;
-            font-family: sans-serif;
-            opacity: 0;
-            visibility: hidden;
-            -webkit-transition: visibility 0s, opacity 0.5s linear;
-            transition: visibility 0s, opacity 0.5s linear;
-        }
-
-        /* Hover on Parent Container */
-        .content_img:hover{
-            cursor: pointer;
-        }
-
-        .content_img:hover div{
-            width: 150px;
-            padding: 8px 15px;
-            visibility: visible;
-            opacity: 0.7;
-        }
-
-        .sprints{
-            background: url('../static/assets/sprints.jpeg') no-repeat;
-            cursor:pointer;
-            width:49.5vw;
-            height:30vw;
-            transform: translateY(3px);
-        }
-
-        .vault{
-            background: url('../static/assets/polevault.png') no-repeat;
-            cursor:pointer;
-            width:49.5vw;
-            height:30vw;
-            transform: translateY(3px);
-        }
-
-        .hurdles{
-            background: url('../static/assets/hurdles.png') no-repeat;
-            cursor:pointer;
-            width:49.5vw;
-            height:30vw;
-            transform: translateY(3px);
-        }
-
-        .throws{
-            background: url('../static/assets/throws.png') no-repeat;
-            cursor:pointer;
-            width:49.5vw;
-            height:30vw;
-            transform: translateY(3px);
-        }
-
-        .fa:hover{
-            font-size: 3em;
-            letter-spacing: 1em;
-            transition: all .2s;
-            color: white;
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.7);
-
-        }
-    </style>
-
     <div>
         <h1 style="font-size:75px; text-align:center; font-family: gilroy,serif;">Events</h1>
         <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Learn about events you might be interested in!</h2>
     </div>
 
     <div style="text-align: center">
-        <input type="button" class="fa sprints" onclick="location.href = 'sprints';";>
-        <input type="button" class="fa vault" onclick="location.href = 'vault';" style="margin-left: 0.1vw">
+        <input type="image" src="../static/assets/sprints.jpeg" style="width:49vw; height:30vw;" onclick="location.href = 'sprints'">
+        <input type="image" src="../static/assets/polevault.png" style="width:49vw; height: 30vw; background-color: yellow" onclick="location.href = 'vault'">
     </div>
 
     <div style="text-align: center" >
-        <input type="button" class="fa hurdles" onclick="location.href = 'hurdles';";>
-        <input type="button" class="fa throws" onclick="location.href = 'throws';" style="margin-left: 0.1vw">
+        <input type="image" src="../static/assets/hurdles.png" style="width:49vw; height:30vw; background-color: blue" onclick="location.href = 'hurdles'";>
+        <input type="image" src="../static/assets/throws.png" style="width:49vw; height: 30vw; background-color: green" onclick="location.href = 'throws'">
     </div>
 {% endblock %}
