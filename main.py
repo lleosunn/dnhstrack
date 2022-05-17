@@ -46,6 +46,18 @@ def stats():
 def sprints():
     return render_template("pages/sprints.html")
 
+@app.route('/vault')
+def vault():
+    return render_template("pages/vault.html")
+
+@app.route('/hurdles')
+def hurdles():
+    return render_template("pages/hurdles.html")
+
+@app.route('/throws')
+def throws():
+    return render_template("pages/throws.html")
+
 
 if __name__ == "__main__":
     # runs the application on the repl development server
