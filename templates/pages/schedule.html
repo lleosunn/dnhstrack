@@ -1,9 +1,21 @@
-{% include "layouts/base.html" %}
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<style>
+    body {
+        background-image: url('https://images.squarespace-cdn.com/content/v1/590a76a3414fb5faa9436eab/1554235107217-4XW2HZRG66736XSWGVET/trackandfield1.jpg?format=1500w');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 
 <div>
-    <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Track Calendar</h2>
+    <h2 style="font-size:35px; text-align:center; font-family: Cambria,serif; color: ghostwhite;">Track Calendar</h2>
 </div>
 
 <div>
     <p style="text-align: center;"><iframe src="https://calendar.google.com/calendar/embed?src=ppp44fit4rr83qf802eekars1s%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
+
+{% endblock %}
