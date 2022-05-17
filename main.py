@@ -18,10 +18,6 @@ def index():
 def registration():
     return render_template("registration.html")
 
-@app.route('/planner')
-def planner():
-    return render_template("layouts/planner.html")
-
 @app.route('/events')
 def events():
     return render_template("pages/events.html")
@@ -45,6 +41,11 @@ def training_log():
 @app.route('/stats')
 def stats():
     return render_template("pages/stats.html")
+
+@app.route('/sprints')
+def sprints():
+    return render_template("pages/sprints.html")
+
 
 if __name__ == "__main__":
     # runs the application on the repl development server

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Squid Game" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <p style="font-size:50px; margin-left:25%;">
+        Running Events
+    </p>
+</div>
+<br>
+
+<div class="row">
+    <div>
+        <a> <img class="col-md-12" style="width:600px;margin-right:-15%" src="../static/assets/runpicture.jpg"></a>
+    </div>
+    <div class="col-md-5"><div style="font-size:25px; margin-left:0%;">
+        <a><p>
+            Running: choose between a variety of distances, ranging from short distances like 100m dash, all the way up to longer distances such as the 1600 or 3200m races. This event is not only about physical strength, but is also a test of mental strength
+        </p></a>
+    </div>
+        <div>
+            <td>
+                <a style="font-size: 20px" href="https://www.imdb.com/title/tt10919420/" class="btn btn-primary">Watch Pro Runners</a>
+            </td>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>High Intensity
+                <br>No teammates, which means you rely on yourself
+                <br>Bond with friedns during practice</td>
+            <td>Takes a lot of work, and can be very painful at times./</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<div>
+    <p style="font-size:20px; text-align:center">Contact Coach Jacobs for more information</p>
+</div>
+<br>
+
+
+</body>
+{% endblock %}
+</html>
