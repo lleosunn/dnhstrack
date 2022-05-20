@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-{% extends "layouts/base.html" %}
+{% include "layouts/base.html" %}
+<style>
+    body {
+        background-image: url('https://wallpaperaccess.com/full/2393037.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 
 {% block body %}
     <div>
@@ -8,12 +15,12 @@
     </div>
 
     <div style="text-align: center">
-        <input type="image" src="../static/assets/sprints.jpeg" style="width:49vw; height:30vw;" onclick="location.href = 'sprints'">
-        <input type="image" src="../static/assets/polevault.png" style="width:49vw; height: 30vw; background-color: yellow" onclick="location.href = 'vault'">
+        <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE_wde-JrzdJcMCWNuI-dvU6QhBkQ2sBRZOQ&usqp=CAU" style="width:49vw; height:30vw;" onclick="location.href = 'sprints'">
+        <input type="image" src="https://us.123rf.com/450wm/istorsvetlana/istorsvetlana1709/istorsvetlana170900279/85394690-athlete-jumping-with-a-pole-sketch-black-on-a-white-background-isolated-art-creative-modern-vector.jpg?ver=6" style="width:49vw; height: 30vw; background-color: yellow" onclick="location.href = 'vault'">
     </div>
 
     <div style="text-align: center" >
-        <input type="image" src="../static/assets/hurdles.png" style="width:49vw; height:30vw; background-color: blue" onclick="location.href = 'hurdles'";>
-        <input type="image" src="../static/assets/throws.png" style="width:49vw; height: 30vw; background-color: green" onclick="location.href = 'throws'">
+        <input type="image" src="../static/assets/hurdles.png" style="width:49vw; height:30vw" onclick="location.href = 'hurdles'";>
+        <input type="image" src="../static/assets/throws.png" style="width:49vw; height: 30vw" onclick="location.href = 'throws'">
     </div>
 {% endblock %}

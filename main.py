@@ -58,7 +58,6 @@ def hurdles():
 def throws():
     return render_template("pages/throws.html")
 
-
 if __name__ == "__main__":
     # runs the application on the repl development server
-    app.run(debug=True, port="5004")
+    app.run(debug=True, port="8000")
