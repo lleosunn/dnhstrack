@@ -18,4 +18,28 @@
     <p style="text-align: center;"><iframe src="https://calendar.google.com/calendar/embed?src=ppp44fit4rr83qf802eekars1s%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
+<!-- the DIV that will contain the widget -->
+<div class="weatherWidget" ></div>
+
+<script>
+    window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+    window.weatherWidgetConfig.push({
+        selector:".weatherWidget",
+        apiKey:"9PN99WCVUHRNERA4XYHYCTGRS", //Sign up for your personal key
+        location:"San Diego, USA", //Enter an address
+        unitGroup:"metric", //"us" or "metric"
+        forecastDays:5, //how many days forecast to show
+        title:"San Diego forecast", //optional title to show in the
+        showTitle:true,
+        showConditions:true
+    });
+
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
 {% endblock %}
