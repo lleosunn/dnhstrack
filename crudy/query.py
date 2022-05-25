@@ -1,7 +1,11 @@
 from __init__ import login_manager, db
-from crudy.model import Users
+from crudy.model import Users, Courses
 from flask_login import current_user, login_user, logout_user
 
+def courses_all():
+    table = Courses.query.all()
+    json_ready = [course.read() for course in table]
+    return json_ready
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
 def users_all():
