@@ -47,4 +47,4 @@ def create():
         )
         # create a record in the Notes table with the Notes object
         note_object.create()
-    return redirect(url_for('notes.notes')
+    return redirect(url_for('notes.notes'))

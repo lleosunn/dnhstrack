@@ -5,8 +5,8 @@ from flask_login import login_required
 from crudy.query import *
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
-app_stats = Blueprint('app_stats', __name__,
-                     url_prefix='/app_stats',
+app_stats = Blueprint('stats', __name__,
+                     url_prefix='/stats',
                      template_folder='templates/cruddy/',
                      static_folder='static',
                      static_url_path='static')
