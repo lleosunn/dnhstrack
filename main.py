@@ -3,9 +3,10 @@ from flask_login import login_required
 
 from __init__ import app
 from crudy.app_crud import app_crud
+# from crudy.app_stats import app_stats
 
 app.register_blueprint(app_crud)
-
+# app.register_blueprint(app_stats.py)
 
 @app.route('/')
 def index():
