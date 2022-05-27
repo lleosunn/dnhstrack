@@ -1,12 +1,15 @@
-from flask import render_template
+from flask import Flask, render_template
 from flask_login import login_required
 
 from __init__ import app
+
 from crudy.app_crud import app_crud
+from notey.app_notes import app_notes
 # from crudy.app_stats import app_stats
 # from crudy.app_notes import app_notes (not working, error)
 
 app.register_blueprint(app_crud)
+app.register_blueprint(app_notes)
 # app.register_blueprint(app_stats)
 # app.register_blueprint(app_notes) (not working, error)
 
