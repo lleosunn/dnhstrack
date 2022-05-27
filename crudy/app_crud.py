@@ -3,6 +3,7 @@ from flask import Blueprint, render_template, request, url_for, redirect, jsonif
 from flask_login import login_required
 
 from crudy.query import *
+from crudy.model import Users
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
@@ -77,11 +78,11 @@ def logout():
 def create():
     """gets data from form and add it to Users table"""
     if request.form:
-        po = user(
-            request.form.get("name"),
-            request.form.get("email"),
-            request.form.get("password"),
-            request.form.get("phone")
+        po = Users(
+            name=request.form.get("name"),
+            email=request.form.get("email"),
+            password=request.form.get("password"),
+            phone=request.form.get("phone")
         )
         po.create()
     return redirect(url_for('crud.crud'))
