@@ -4,11 +4,13 @@ from flask_login import login_required
 from __init__ import app
 from crudy.app_crud import app_crud
 from crudy.app_crud_api import app_crud_api
-# from crudy.app_notes import app_notes
+# from crudy.app_stats import app_stats
+# from crudy.app_notes import app_notes (not working, error)
 
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
-# app.register_blueprint(app_notes)
+# app.register_blueprint(app_stats)
+# app.register_blueprint(app_notes) (not working, error)
 
 
 @app.route('/')
@@ -59,6 +61,10 @@ def hurdles():
 @app.route('/throws')
 def throws():
     return render_template("pages/throws.html")
+
+@app.route('/sports_api')
+def sports_api():
+    return render_template("pages/sports_api.html")
 
 if __name__ == "__main__":
     # runs the application on the repl development server

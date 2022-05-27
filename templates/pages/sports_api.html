@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Shop DNHS" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block body %}
+<style>
+    body {
+        background-image: url('https://cdn.wallpapersafari.com/88/50/LxOAM1.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<!--API STUFF-->
+<script>
+    async function getSports() {
+        const response = await fetch("https://odds.p.rapidapi.com/v4/sports?all=true", {
+            "method": "GET",
+            "headers": {
+                // "accept-encoding": "application/gzip",
+                "x-rapidapi-host": 'odds.p.rapidapi.com',
+                "x-rapidapi-key": '92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098'
+            }
+        })
+        console.log(response);
+        const sports = await response.text();
+        document.getElementById("sports_Id").innerHTML = sports;
+    }
+    getSports();
+</script>
+
+<div class="container p-3 my-3 bg-dark text-light rounded">
+
+    <h4>Sportsbook API</h4>
+    <div id="sports_Id"></div>
+
+</div>
+
+<script>
+    async function getEvents() {
+        const response = await fetch("https://odds.p.rapidapi.com/v4/sports?all=true", {
+            "method": "GET",
+            "headers": {
+                // "accept-encoding": "application/gzip",
+                "x-rapidapi-host": 'odds.p.rapidapi.com',
+                "x-rapidapi-key": '92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098'
+            }
+        })
+        console.log(response);
+        const sports = await response.text();
+        document.getElementById("sports_Id").innerHTML = sports;
+    }
+    getSports();
+</script>
+
+<div class="container p-3 my-3 bg-dark text-light rounded">
+
+    <h4>Sportsbook API</h4>
+    <div id="sports_Id"></div>
+
+</div>
+
+<div class="container p-3 my-3 bg-black text-light rounded">
+    <button onclick="goBack()">Return</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</div>
+
+{% endblock %}
+</html>
