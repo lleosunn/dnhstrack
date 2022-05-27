@@ -40,6 +40,10 @@ def shop_dnhs():
 def training_log():
     return render_template("pages/training_log.html")
 
+@app.route('/records')
+def records():
+    return render_template("pages/records.html")
+
 @app.route('/stats')
 def stats():
     return render_template("pages/stats.html")

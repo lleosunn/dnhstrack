@@ -1,0 +1,1 @@
+<script src="https://www.athletic.net/api/1/RemoteHTML.ashx?Report=XCTeam&Style=1&SchoolID=31013&Season=2020&DistID=5000&Count=5&Gender=M&t=fx5dc" type="text/javascript"></script>
