@@ -11,10 +11,7 @@
                     <a class="nav-link"; style="color:white" href={{ url_for('schedule') }}>Schedule <span class="sr-only"></span></a>
                     <a class="nav-link"; style="color:white" href={{ url_for('records') }}>Records <span class="sr-only"></span></a>
                     <a class="nav-link"; style="color:white" href={{ url_for('pace_conversion') }}>Pace Conversion <span class="sr-only"></span></a>
-                    <a class="nav-link"; style="color:white" href={{ url_for('crud.crud_login') }}>Login <span class="sr-only"></span></a>
-                    <a class="nav-link"; style="color:white" href={{ url_for('crud.logout') }}>Logout<span class="sr-only"></span></a>
-                    <a class="nav-link"; style="color:white" href={{ url_for('crud.crud') }}>Crud<span class="sr-only"></span></a>
-                    <a class="nav-link"; style="color:white" href={{ url_for('notes.notes') }}>Notes<span class="sr-only"></span></a>
+                    <a class="nav-link"; style="color:white" href={{ url_for('notes.notes') }}>Training Log<span class="sr-only"></span></a>
                     <a class="nav-link"; style="color:white" href={{ url_for('sports_api') }}>Sports API<span class="sr-only"></span></a>
 
                     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
@@ -27,6 +24,13 @@
                             </div>
 
                         </ul>
+                    </div>
+                    <div>
+                        {% if current_user.is_authenticated %}
+                            <a class="nav-link"; href={{url_for('crud.logout')}}> {{ current_user.name }} </a>
+                        {% else %}
+                            <a class="nav-link"; href={{url_for('crud.crud_login')}}>Login</a>
+                        {% endif %}
                     </div>
                 </ul>
             </div>

@@ -8,18 +8,12 @@
     <script src={{url_for("crud.static", filename="javascript/reload_page.js", version='101') }}></script>
 {% endblock %}
 
-<!-- CONTENT (in <body>), content for this page -->
 {% block body %}
-    <div class="container py-4">
-        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-            <span class="fs-4">SQL CRUD Admin Page</span>
-        </header>
-    </div>
     <div class="container py-4 text-light bg-success">
 
         <div class="container bg-secondary py-4">
             <div class="p-5 mb-4 bg-light text-dark rounded-3">
-                <h2>Table Viewer</h2>
+                <h2>Admin Page</h2>
                 <div class="row align-items-md-stretch">
                     <table class="table">
                         <tbody>
@@ -32,11 +26,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <a href={{ url_for('crud.logout') }}>
-                    Logout
-                </a>
-
                 <div class="row align-items-md-stretch">
                     <div class="container-fluid py-5">
                         <table class="table">
@@ -46,6 +35,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Password</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -61,8 +51,7 @@
                                     <td>{{ row['userID'] }}</td>
                                     <td>{{ row['name'] }}</td>
                                     <td>{{ row['email'] }}</td>
-                                    <td>{{ row['phone'] }}</td>
-{#                                    <td>{{ pnf }}</td>#}
+                                    <td>{{ pnf }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -181,29 +170,8 @@
                         </form>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-    </div>
-
-    <!-- Back end SQL data definition code (SQLalchemy) -->
-    <div class="container py-4">
-        <h1 id="BE-MODEL">Back End Definition Code (Model) </h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Fmodel.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-    </div>
-
-    <!-- Front End HTML, shows this file -->
-    <div class="container py-4">
-        <h1 id="FE-VIEW">Front End HTML Code (View) </h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Ftemplates%2Fcrud%2Fcrud.html&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
-    </div>
-
-    <!-- Back Route code -->
-    <div class="container py-4">
-        <h1 id="BE-CONTROL">Back End Form Request and API Code (Control)</h1>
-        <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Fcrud%2Fapp_crud.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
     </div>
 
 {% endblock %}

@@ -42,8 +42,12 @@ def crud_login():
         email = request.form.get("email")
         password = request.form.get("password")
         phone = request.form.get("phone")
-        if login(email, password, phone):       # zero index [0] used as email is a tuple
-            return redirect(url_for('crud.crud'))
+        if login(email, password, phone):
+            print(email)
+            if (email == "admin@gmail.com" and password == "admin123"):
+                return redirect(url_for('crud.crud'))
+            else:
+                return redirect(url_for('notes.notes'))
 
     # if not logged in, show the login page
     return render_template("login.html")
