@@ -1,2 +1,73 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
+{% set project = "DNHS Track" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <p style="font-size:50px; margin-left:25%;">
+        Pole Vault
+    </p>
+</div>
+<br>
+
+<div class="row">
+    <div>
+        <input type="image" src="https://classroomclipart.com/images/gallery/Clipart/Sports/Track_and_Field_Clipart/man-performing-a-pole-vault-sports-clipart.jpg" style="width:49vw; height:30vw;" onclick="location.href = 'sprints'">
+    </div>
+
+    <div class="col-md-5"><div style="font-size:25px; margin-left:0%;">
+        <a><p>
+            Vaulting: lower intensity with less nerves, allowing for a more relaxed experience. Practice is less rigorous, and focuses on a lot more upper body strength than other events in track and field. Great place to create bonds with new friends!
+        </p></a>
+    </div>
+        <div>
+            <td>
+                <a style="font-size: 20px" href="https://www.youtube.com/watch?v=0kdJEDiwgu4" class="btn btn-primary">Watch Pro Vaulters</a>
+            </td>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>High Intensity
+                <br>No teammates, which means you rely on yourself. Less intensity = less nerves (until you're on ur last attempt)
+                <br>Bond with friends during practice</td>
+            <td>Takes a lot of work, and can be very painful at times</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<div>
+    <p style="font-size:20px; text-align:center">Contact Coach Jacobs for more information</p>
+</div>
+<br>
+
+
+</body>
+{% endblock %}
+</html>
