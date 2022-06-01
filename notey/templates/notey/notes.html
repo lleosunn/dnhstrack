@@ -5,22 +5,18 @@
 {% endblock %}
 
 {% block body %}
-<div class="container py-4">
-    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-        <span class="fs-4">SQL Notes Page</span>
-    </header>
-</div>
+
 <div class="container py-4 text-light bg-success">
     <div class="container bg-secondary py-4">
         <div class="p-5 mb-4 bg-light text-dark rounded-3">
-            <h2>Notes for {{ user.name }}</h2>
+            <h2>Training Log for: {{ user.name }}</h2>
             <hr>
             <!--Notes input form, textarea supports multiple lines of input  -->
             <form method="POST" ID="create" action={{url_for('notes.create')}}>
                 <table class="table">
                     <thead>
                     <tr>
-                        <th><label for="notes">Create a new note:</label></th>
+                        <th><label for="notes">Create a new log:</label></th>
                     </tr>
                     </thead>
                     <tbody>
