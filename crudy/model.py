@@ -274,6 +274,8 @@ def model_printer():
     for row in result:
         print(row)
 
+
+
 if __name__ == "__main__":
     #model_tester()  # builds model of Users
     # model_printer()
