@@ -73,72 +73,7 @@ class Users(UserMixin, db.Model):
     phone = db.Column(db.String(255), unique=False, nullable=False)
     notes = db.relationship("Notes", cascade='all, delete', backref='users', lazy=True)
 
-
-def load_data():
-    db.create_all()
-    # got the database from admin and then converted it into a csv file
-    data = "courses.csv"
-    # takes csv file and stores data into a variable
-    with open(data, newline='') as f:
-        reader = csv.reader(f)
-        results = list(reader)
-    # results.remove(0)
-    # takes data and makes each result a separate row in the database
-    for index, result in enumerate(results):
-        # skips first and last row so that database doesn't include headers or totals from csv
-        if index != 0 and index != len(results) - 1:
-            c = Courses(result)  # takes a row out of results
-            c.create()  # creates a row in the database
-    courses = Courses.query
-    for course in courses:
-        print(course.read())
-
-
-class Courses(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    dept = db.Column(db.String)
-    title = db.Column(db.String)
-    courseid = db.Column(db.String, unique=True, nullable=False)
-    ninth = db.Column(db.String)
-    tenth = db.Column(db.String)
-    eleventh = db.Column(db.String)
-    twelfth = db.Column(db.String)
-    notes = db.Column(db.String)
-
-    def __init__(self, result):
-        self.dept = result[0]
-        self.title = result[1]
-        self.courseid = result[2]
-        self.ninth = result[3]
-        self.tenth = result[4]
-        self.eleventh = result[5]
-        self.twelfth = result[6]
-        self.notes = result[7]
-
-    def create(self):
-        try:
-            # creates a person object from Users(db.Model) class, passes initializers
-            db.session.add(self)  # add prepares to persist person object to Users table
-            db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
-            return self
-        except IntegrityError:
-            db.session.remove()
-            return None
-
-    def read(self):
-        return {
-            "department": self.dept,
-            "course_name": self.title,
-            "course_id": self.courseid,
-            "freshman": self.ninth,
-            "sophomore": self.tenth,
-            "junior": self.eleventh,
-            "senior": self.twelfth,
-            "notes": self.notes
-        }
-
-
-# constructor of a User object, initializes of instance variables within object
+    # constructor of a User object, initializes of instance variables within object
     def __init__(self, name, email, password, phone):
         self.name = name
         self.email = email
@@ -264,16 +199,6 @@ def model_driver():
             print(note.read())
         print("-" * 85)
         print()
-
-def model_printer():
-    print("------------")
-    print("Table: users with SQL query")
-    print("------------")
-    result = db.session.execute('select * from Courses')
-    print(result.keys())
-    for row in result:
-        print(row)
-
 
 
 if __name__ == "__main__":
