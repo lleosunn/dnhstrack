@@ -1,2 +1,72 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+    <style>
+        table, th, td {
+            border:2px solid black;
+            text-align: center;
+        }
+        #deez{
+            margin-right:8%;
+        }
+    </style>
+    <body>
+    <br>
+
+    <div>
+        <p style="font-size:50px; margin-left:25%;">
+            Throwing Events
+        </p>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div>
+            <input type="image" src="   https://st2.depositphotos.com/1037238/7136/v/950/depositphotos_71367397-stock-illustration-shot-putter-in-a-shot.jpg" style="width:45vw; height:30vw;" onclick="location.href = 'sprints'">
+        </div>
+        <div class="col-md-5"><div style="font-size:25px; margin-left:0%;">
+            <a><p>
+                Throwing: choose between multiple throwing events, including shot put, hammer, and discuss. These events are generally for people with a stronger upper body and sturdier build, but welcomes all types of people. Want to join track and field but don't like the running aspect? These events are perfect for you.
+            </p></a>
+        </div>
+            <div>
+                <td>
+                    <a style="font-size: 20px" href="https://www.youtube.com/watch?v=VtHfAgB8nGE" class="btn btn-primary">Watch Pro Throwers</a>
+                </td>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <div>
+        <table style="margin-right:auto; margin-left:auto; width:65%">
+            <tr>
+                <th style="font-size:30px">Pros</th>
+                <th style="font-size:30px">Cons</th>
+            </tr>
+            <tr style="font-size:20px">
+                <td>Lower intensity means less pre-meet stress
+                    <br>No teammates, which means you rely on yourself
+                    <br>Not a lot of running, which means you don't really get tired.</td>
+                <td>Meets can get boring</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <p style="font-size:20px; text-align:center">Contact Coach Jacobs for more information    <button class="button button1"><a href = "mailto: yolanda.sh2004@gmail.com">Email</a></button></p>
+    </div>
+    <br>
+
+
+    </body>
+{% endblock %}
+</html>

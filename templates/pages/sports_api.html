@@ -7,72 +7,52 @@
     <title>Title</title>
 </head>
 {% block body %}
-<style>
-    body {
-        background-image: url('https://cdn.wallpapersafari.com/88/50/LxOAM1.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-</style>
-
-<!--API STUFF-->
-<script>
-    async function getSports() {
-        const response = await fetch("https://odds.p.rapidapi.com/v4/sports?all=true", {
-            "method": "GET",
-            "headers": {
-                // "accept-encoding": "application/gzip",
-                "x-rapidapi-host": 'odds.p.rapidapi.com',
-                "x-rapidapi-key": '92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098'
-            }
-        })
-        console.log(response);
-        const sports = await response.text();
-        document.getElementById("sports_Id").innerHTML = sports;
-    }
-    getSports();
-</script>
-
-<div class="container p-3 my-3 bg-dark text-light rounded">
-
-    <h4>Sportsbook API</h4>
-    <div id="sports_Id"></div>
-
-</div>
-
-<script>
-    async function getEvents() {
-        const response = await fetch("https://odds.p.rapidapi.com/v4/sports?all=true", {
-            "method": "GET",
-            "headers": {
-                // "accept-encoding": "application/gzip",
-                "x-rapidapi-host": 'odds.p.rapidapi.com',
-                "x-rapidapi-key": '92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098'
-            }
-        })
-        console.log(response);
-        const sports = await response.text();
-        document.getElementById("sports_Id").innerHTML = sports;
-    }
-    getSports();
-</script>
-
-<div class="container p-3 my-3 bg-dark text-light rounded">
-
-    <h4>Sportsbook API</h4>
-    <div id="sports_Id"></div>
-
-</div>
-
-<div class="container p-3 my-3 bg-black text-light rounded">
-    <button onclick="goBack()">Return</button>
-    <script>
-        function goBack() {
-            window.history.back();
+    <style>
+        body {
+            background-image: url('https://cdn.wallpapersafari.com/88/50/LxOAM1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
+    </style>
+
+    <!--API STUFF-->
+    <script>
+        async function getSports() {
+            const response = await fetch("https://odds.p.rapidapi.com/v4/sports?all=true", {
+                "method": "GET",
+                "headers": {
+                    // "accept-encoding": "application/gzip",
+                    "x-rapidapi-host": 'odds.p.rapidapi.com',
+                    "x-rapidapi-key": '92b9f4e31cmsh02f34db44282758p14191cjsndd8b61d87098'
+                }
+            })
+            console.log(response);
+            const sports = await response.text();
+            document.getElementById("sports_Id").innerHTML = sports;
+        }
+        getSports();
     </script>
-</div>
+    <script src="sports_api.py"></script>
+
+    <!--Where the JSON is displayed-->
+    <div class="container p-3 my-3 bg-dark text-light rounded">
+        <h4>Sports API</h4>
+        <div id="sports_Id"></div>
+    </div>
+
+    <table border="1" align="center" bgcolor="#ffefd5"><thead><tr><th>key</th><th>group</th><th>title</th><th>description</th><th>active</th><th>has_outrights</th></tr></thead><tbody><tr><td>americanfootball_ncaaf</td><td>American Football</td><td>NCAAF</td><td>US College Football</td><td>True</td><td>False</td></tr><tr><td>americanfootball_nfl</td><td>American Football</td><td>NFL</td><td>US Football</td><td>True</td><td>False</td></tr><tr><td>americanfootball_nfl_super_bowl_winner</td><td>American Football</td><td>NFL Super Bowl Winner</td><td>Super Bowl Winner 2022/2023</td><td>True</td><td>True</td></tr><tr><td>aussierules_afl</td><td>Aussie Rules</td><td>AFL</td><td>Aussie Football</td><td>True</td><td>False</td></tr><tr><td>baseball_mlb</td><td>Baseball</td><td>MLB</td><td>Major League Baseball</td><td>True</td><td>False</td></tr><tr><td>baseball_mlb_world_series_winner</td><td>Baseball</td><td>MLB World Series Winner</td><td>World Series Winner 2022</td><td>True</td><td>True</td></tr><tr><td>basketball_euroleague</td><td>Basketball</td><td>Basketball Euroleague</td><td>Basketball Euroleague</td><td>False</td><td>False</td></tr><tr><td>basketball_nba</td><td>Basketball</td><td>NBA</td><td>US Basketball</td><td>True</td><td>False</td></tr><tr><td>basketball_nba_championship_winner</td><td>Basketball</td><td>NBA Championship Winner</td><td>Championship Winner 2021/2022</td><td>True</td><td>True</td></tr><tr><td>basketball_ncaab</td><td>Basketball</td><td>NCAAB</td><td>US College Basketball</td><td>False</td><td>False</td></tr><tr><td>basketball_wnba</td><td>Basketball</td><td>WNBA</td><td>US Basketball</td><td>True</td><td>False</td></tr><tr><td>cricket_big_bash</td><td>Cricket</td><td>Big Bash</td><td>Big Bash League</td><td>False</td><td>False</td></tr><tr><td>cricket_icc_world_cup</td><td>Cricket</td><td>ICC World Cup</td><td>ICC World Cup</td><td>False</td><td>False</td></tr><tr><td>cricket_ipl</td><td>Cricket</td><td>IPL</td><td>Indian Premier League</td><td>False</td><td>False</td></tr><tr><td>cricket_odi</td><td>Cricket</td><td>One Day Internationals</td><td>One Day Internationals</td><td>False</td><td>False</td></tr><tr><td>cricket_test_match</td><td>Cricket</td><td>Test Matches</td><td>International Test Matches</td><td>True</td><td>False</td></tr><tr><td>golf_masters_tournament_winner</td><td>Golf</td><td>Masters Tournament Winner</td><td>2023 Winner</td><td>False</td><td>True</td></tr><tr><td>golf_pga_championship_winner</td><td>Golf</td><td>PGA Championship Winner</td><td>2022 Winner</td><td>False</td><td>True</td></tr><tr><td>golf_the_open_championship_winner</td><td>Golf</td><td>The Open Winner</td><td>2022 Winner</td><td>True</td><td>True</td></tr><tr><td>golf_us_open_winner</td><td>Golf</td><td>US Open Winner</td><td>2022 Winner</td><td>True</td><td>True</td></tr><tr><td>icehockey_nhl</td><td>Ice Hockey</td><td>NHL</td><td>US Ice Hockey</td><td>True</td><td>False</td></tr><tr><td>icehockey_nhl_championship_winner</td><td>Ice Hockey</td><td>NHL Championship Winner</td><td>Stanley Cup Winner 2021/2022</td><td>True</td><td>True</td></tr><tr><td>icehockey_sweden_allsvenskan</td><td>Ice Hockey</td><td>HockeyAllsvenskan</td><td>Swedish Hockey Allsvenskan</td><td>False</td><td>False</td></tr><tr><td>icehockey_sweden_hockey_league</td><td>Ice Hockey</td><td>SHL</td><td>Swedish Hockey League</td><td>True</td><td>False</td></tr><tr><td>mma_mixed_martial_arts</td><td>Mixed Martial Arts</td><td>MMA</td><td>Mixed Martial Arts</td><td>True</td><td>False</td></tr><tr><td>politics_us_presidential_election_winner</td><td>Politics</td><td>US Presidential Elections Winner</td><td>2024 US Presidential Election Winner</td><td>False</td><td>True</td></tr><tr><td>rugbyleague_nrl</td><td>Rugby League</td><td>NRL</td><td>Aussie Rugby League</td><td>True</td><td>False</td></tr><tr><td>soccer_africa_cup_of_nations</td><td>Soccer</td><td>Africa Cup of Nations</td><td>Africa Cup of Nations</td><td>False</td><td>False</td></tr><tr><td>soccer_argentina_primera_division</td><td>Soccer</td><td>Primera División - Argentina</td><td>Argentine Primera División</td><td>False</td><td>False</td></tr><tr><td>soccer_australia_aleague</td><td>Soccer</td><td>A-League</td><td>Aussie Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_belgium_first_div</td><td>Soccer</td><td>Belgium First Div</td><td>Belgian First Division A</td><td>False</td><td>False</td></tr><tr><td>soccer_brazil_campeonato</td><td>Soccer</td><td>Brazil Série A</td><td>Brasileirão Série A</td><td>True</td><td>False</td></tr><tr><td>soccer_china_superleague</td><td>Soccer</td><td>Super League - China</td><td></td><td>True</td><td>False</td></tr><tr><td>soccer_denmark_superliga</td><td>Soccer</td><td>Denmark Superliga</td><td></td><td>False</td><td>False</td></tr><tr><td>soccer_efl_champ</td><td>Soccer</td><td>Championship</td><td>EFL Championship</td><td>False</td><td>False</td></tr><tr><td>soccer_england_efl_cup</td><td>Soccer</td><td>EFL Cup</td><td>League Cup</td><td>False</td><td>False</td></tr><tr><td>soccer_england_league1</td><td>Soccer</td><td>League 1</td><td>EFL League 1</td><td>False</td><td>False</td></tr><tr><td>soccer_england_league2</td><td>Soccer</td><td>League 2</td><td>EFL League 2 </td><td>False</td><td>False</td></tr><tr><td>soccer_epl</td><td>Soccer</td><td>EPL</td><td>English Premier League</td><td>False</td><td>False</td></tr><tr><td>soccer_fa_cup</td><td>Soccer</td><td>FA Cup</td><td>Football Association Challenge Cup</td><td>False</td><td>False</td></tr><tr><td>soccer_fifa_world_cup</td><td>Soccer</td><td>FIFA World Cup</td><td>FIFA World Cup 2022</td><td>True</td><td>False</td></tr><tr><td>soccer_fifa_world_cup_winner</td><td>Soccer</td><td>FIFA World Cup Winner</td><td>FIFA World Cup Winner 2022</td><td>True</td><td>True</td></tr><tr><td>soccer_finland_veikkausliiga</td><td>Soccer</td><td>Veikkausliiga - Finland</td><td></td><td>False</td><td>False</td></tr><tr><td>soccer_france_ligue_one</td><td>Soccer</td><td>Ligue 1 - France</td><td></td><td>False</td><td>False</td></tr><tr><td>soccer_france_ligue_two</td><td>Soccer</td><td>Ligue 2 - France</td><td>French Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_germany_bundesliga</td><td>Soccer</td><td>Bundesliga - Germany</td><td>German Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_germany_bundesliga2</td><td>Soccer</td><td>Bundesliga 2 - Germany</td><td>German Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_italy_serie_a</td><td>Soccer</td><td>Serie A - Italy</td><td>Italian Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_italy_serie_b</td><td>Soccer</td><td>Serie B - Italy</td><td>Italian Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_japan_j_league</td><td>Soccer</td><td>J League</td><td>Japan Soccer League</td><td>False</td><td>False</td></tr><tr><td>soccer_korea_kleague1</td><td>Soccer</td><td>K League 1</td><td>Korean Soccer</td><td>True</td><td>False</td></tr><tr><td>soccer_league_of_ireland</td><td>Soccer</td><td>League of Ireland</td><td>Airtricity League Premier Division</td><td>False</td><td>False</td></tr><tr><td>soccer_mexico_ligamx</td><td>Soccer</td><td>Liga MX</td><td>Mexican Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_netherlands_eredivisie</td><td>Soccer</td><td>Dutch Eredivisie</td><td>Dutch Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_norway_eliteserien</td><td>Soccer</td><td>Eliteserien - Norway</td><td>Norwegian Soccer</td><td>True</td><td>False</td></tr><tr><td>soccer_portugal_primeira_liga</td><td>Soccer</td><td>Primeira Liga - Portugal</td><td>Portugese Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_russia_premier_league</td><td>Soccer</td><td>Premier League - Russia</td><td>Russian Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_spain_la_liga</td><td>Soccer</td><td>La Liga - Spain</td><td>Spanish Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_spain_segunda_division</td><td>Soccer</td><td>La Liga 2 - Spain</td><td>Spanish Soccer</td><td>True</td><td>False</td></tr><tr><td>soccer_spl</td><td>Soccer</td><td>Premiership - Scotland</td><td>Scottish Premiership</td><td>False</td><td>False</td></tr><tr><td>soccer_sweden_allsvenskan</td><td>Soccer</td><td>Allsvenskan - Sweden</td><td>Swedish Soccer</td><td>True</td><td>False</td></tr><tr><td>soccer_sweden_superettan</td><td>Soccer</td><td>Superettan - Sweden</td><td>Swedish Soccer</td><td>True</td><td>False</td></tr><tr><td>soccer_switzerland_superleague</td><td>Soccer</td><td>Swiss Superleague</td><td>Swiss Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_turkey_super_league</td><td>Soccer</td><td>Turkey Super League</td><td>Turkish Soccer</td><td>False</td><td>False</td></tr><tr><td>soccer_uefa_champs_league</td><td>Soccer</td><td>UEFA Champions</td><td>European Champions League</td><td>False</td><td>False</td></tr><tr><td>soccer_uefa_europa_league</td><td>Soccer</td><td>UEFA Europa</td><td>European Europa League</td><td>False</td><td>False</td></tr><tr><td>soccer_uefa_european_championship</td><td>Soccer</td><td>UEFA Euro 2020</td><td>UEFA European Championship</td><td>False</td><td>False</td></tr><tr><td>soccer_usa_mls</td><td>Soccer</td><td>MLS</td><td>Major League Soccer</td><td>True</td><td>False</td></tr><tr><td>tennis_atp_aus_open_singles</td><td>Tennis</td><td>ATP Australian Open</td><td>Men&#x27;s Singles</td><td>False</td><td>False</td></tr><tr><td>tennis_atp_french_open</td><td>Tennis</td><td>ATP French Open</td><td>Men&#x27;s Singles</td><td>True</td><td>False</td></tr><tr><td>tennis_atp_us_open</td><td>Tennis</td><td>ATP US Open</td><td>Men&#x27;s Singles</td><td>False</td><td>False</td></tr><tr><td>tennis_atp_wimbledon</td><td>Tennis</td><td>ATP Wimbledon</td><td>Men&#x27;s Singles</td><td>False</td><td>False</td></tr><tr><td>tennis_wta_aus_open_singles</td><td>Tennis</td><td>WTA Australian Open</td><td>Women&#x27;s Singles</td><td>False</td><td>False</td></tr><tr><td>tennis_wta_french_open</td><td>Tennis</td><td>WTA French Open</td><td>Women&#x27;s Singles</td><td>True</td><td>False</td></tr><tr><td>tennis_wta_us_open</td><td>Tennis</td><td>WTA US Open</td><td>Women&#x27;s Singles</td><td>False</td><td>False</td></tr><tr><td>tennis_wta_wimbledon</td><td>Tennis</td><td>WTA Wimbledon</td><td>Women&#x27;s Singles</td><td>False</td><td>False</td></tr></tbody></table>
+
+
+    <!--Button to return-->
+    <div class="container p-3 my-3 bg-black text-light rounded">
+        <button onclick="goBack()">Return</button>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
 
 {% endblock %}
 </html>

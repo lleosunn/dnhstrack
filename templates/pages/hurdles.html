@@ -1,2 +1,73 @@
 <!DOCTYPE html>
 {% extends "layouts/base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+    <style>
+        table, th, td {
+            border:2px solid black;
+            text-align: center;
+        }
+        #deez{
+            margin-right:8%;
+        }
+    </style>
+    <body>
+    <br>
+
+    <div>
+        <p style="font-size:50px; margin-left:25%;">
+            Jumping Events
+        </p>
+    </div>
+    <br>
+
+    <div class="row">
+        <div>
+            <input type="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9vhcviAocOm8HPs_q-1CSPkjlza3G6ANwwQ&usqp=CAU" style="width:45vw; height:30vw;" onclick="location.href = 'sprints'">
+        </div>
+        <div class="col-md-5"><div style="font-size:25px; margin-left:0%;">
+            <a><p>
+                Jumping Events: Jumping events include hurdling, long jump, and high jump. Sprinting fast is important for hurdling, and long jump, but you can still be good without much speed. People who are taller and have high hops generally choose these events, but any height is acceptable. If you like jumping high or far, than these events are perfect for you.
+            </p></a>
+        </div>
+            <div>
+                <td>
+                    <a style="font-size: 20px" href="https://www.youtube.com/watch?v=sLmoJyVnLm0" class="btn btn-primary">Watch Pro Jumpers</a>
+                </td>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+
+    <div>
+        <table style="margin-right:auto; margin-left:auto; width:65%">
+            <tr>
+                <th style="font-size:30px">Pros</th>
+                <th style="font-size:30px">Cons</th>
+            </tr>
+            <tr style="font-size:20px">
+                <td>High Intensity
+                    <br>No teammates, which means you rely on yourself
+                    <br>not a lot of running, and is less tiring than running events</td>
+                <td>Sand is annoying in long jump
+                    <br>Triple jump hurts your joints
+                    <br>a lot of time spent waiting</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <p style="font-size:20px; text-align:center">Contact Coach Jacobs for more information    <button class="button button1"><a href = "mailto: cjacobs.com">Email</a></button></p>
+    </div>
+    <br>
+
+
+    </body>
+{% endblock %}
+</html>
